@@ -6,7 +6,7 @@ export default function newPage() {
     async function createTodo(data: FormData){    
         "use server"
         
-        const title = data.get("title")?.valueOf()
+        const title:string = data.get("title")?.valueOf() as string;
 
         await prisma.todo.create({ data: { title, complete: false}})
 
