@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export default function newPage() {
     async function createTodo(data: FormData){    
-        "use server"
         
         const title:string = data.get("title")?.valueOf() as string;
 
