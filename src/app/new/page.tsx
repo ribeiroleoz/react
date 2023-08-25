@@ -8,7 +8,7 @@ export default function newPage() {
         
         const title:string = data.get("title")?.valueOf() as string;
 
-        await prisma.todo.create({ data: { title, complete: false}})
+        await prisma.todo.create({ data: { title, complete: false}});
 
         redirect("/")
     }
